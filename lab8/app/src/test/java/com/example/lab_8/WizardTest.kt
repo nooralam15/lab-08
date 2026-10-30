@@ -54,7 +54,7 @@ class WizardTest {
         evilWizard.train() // mana should be 0, and spellPower should be 1
 
         assertEquals(0, evilWizard.mana)
-        assertEquals(0, evilWizard.spellPower)
+        assertEquals(1, evilWizard.spellPower)
     }
 
     @Test
