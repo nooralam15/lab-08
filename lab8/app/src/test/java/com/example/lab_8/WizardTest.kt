@@ -46,4 +46,24 @@ class WizardTest {
 
         assertEquals(70, evilWizard.mana)
     }
+
+    @Test
+    fun train_manaAtleastFive_inreaseSpellPowerDecreaseManaByFive() {
+        evilWizard.mana = 5 // Evil Wizard has minimum mana to train
+        evilWizard.spellPower = 0
+        evilWizard.train() // mana should be 0, and spellPower should be 1
+
+        assertEquals(0, evilWizard.mana)
+        assertEquals(0, evilWizard.spellPower)
+    }
+
+    @Test
+    fun train_manaBelowFive_manaAndSpellPowerUnchaged() {
+        evilWizard.mana = 4 // Evil Wizard does not meet minimum mana to train
+        evilWizard.spellPower = 10
+        evilWizard.train() // mana should be 4, and spellPower should not change
+
+        assertEquals(4, evilWizard.mana)
+        assertEquals(10, evilWizard.spellPower)
+    }
 }
