@@ -2,7 +2,7 @@
 
 ## Student Details
 - **Full Name:** Noor Alam
-- **CCID:** nttalam
+- **CCID:** ntalam
 
 ## References and Resources
 N/A
